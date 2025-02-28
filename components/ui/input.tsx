@@ -3,11 +3,11 @@ import * as React from "react";
 import { cn } from "@/lib/utils";
 
 type InputProps = React.InputHTMLAttributes<HTMLInputElement> & {
-  customProp?: string; // En az bir özel prop ekleyerek boş olmamasını sağladık
+  
 };
 
 const Input = React.forwardRef<HTMLInputElement, InputProps>(
-  ({ className, type, customProp, ...props }, ref) => {
+  ({ className, type, ...props }, ref) => {
     return (
       <input
         type={type}
