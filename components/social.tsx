@@ -1,15 +1,15 @@
 // FontAwesome kütüphanelerini içe aktar
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
-  faFacebookF,
+
   faXTwitter,
   faInstagram,
   faYoutube,
-  faWhatsapp,
+
   faFacebook,
 } from "@fortawesome/free-brands-svg-icons";
 import Link from "next/link";
-import { faEnvelope, faMailBulk } from "@fortawesome/free-solid-svg-icons";
+import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
 
 export default function Social() {
   return (
