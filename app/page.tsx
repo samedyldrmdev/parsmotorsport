@@ -1,8 +1,5 @@
 "use client";
 
-import Image from "next/image";
-import { Button } from "@/components/ui/button";
-import PersonalCard from "@/components/ui/personalcard";
 import { Hero } from "@/components/ui/animated-hero";
 import LogosList from "@/components/ui/logoslist";
 import { FeaturesSectionWithHoverEffects } from "@/components/feature-section-with-hover-effects";
