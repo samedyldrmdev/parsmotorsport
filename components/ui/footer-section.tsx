@@ -1,27 +1,33 @@
-import * as React from "react"
-import { Button } from "@/components/ui/button"
-import { Label } from "@/components/ui/label"
-import { Switch } from "@/components/ui/switch"
+import * as React from "react";
+import { Button } from "@/components/ui/button";
+import { Label } from "@/components/ui/label";
+import { Switch } from "@/components/ui/switch";
 import {
   Tooltip,
   TooltipContent,
   TooltipProvider,
   TooltipTrigger,
-} from "@/components/ui/tooltip"
-import { faFacebook, faInstagram, faXTwitter, faYoutube } from "@fortawesome/free-brands-svg-icons"
-import { faMoon, faSun } from "@fortawesome/free-solid-svg-icons"
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+} from "@/components/ui/tooltip";
+import {
+  faFacebook,
+  faInstagram,
+  faXTwitter,
+  faYoutube,
+} from "@fortawesome/free-brands-svg-icons";
+import { faMoon, faSun } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import Image from "next/image";
 
 function Footerdemo() {
-  const [isDarkMode, setIsDarkMode] = React.useState(false)
+  const [isDarkMode, setIsDarkMode] = React.useState(false);
 
   React.useEffect(() => {
     if (isDarkMode) {
-      document.documentElement.classList.add("dark")
+      document.documentElement.classList.add("dark");
     } else {
-      document.documentElement.classList.remove("dark")
+      document.documentElement.classList.remove("dark");
     }
-  }, [isDarkMode])
+  }, [isDarkMode]);
 
   return (
     <footer className="relative border-t bg-background text-foreground transition-colors duration-300">
@@ -29,28 +35,45 @@ function Footerdemo() {
         <div className="grid gap-12 md:grid-cols-2 lg:grid-cols-4">
           <div className="relative">
             {/* Logo kısmı */}
-            <img
+            <Image
               src="/images/Logo.png"
               alt="Unternehmenslogo"
+              width={192} // 48 * 4 (tailwind'in w-48 karşılığı px cinsinden)
+              height={64} // Otomatik ölçeklenmesi için uygun bir yükseklik
               className="w-48 h-auto dark:invert"
             />
           </div>
           <div>
             <h3 className="mb-4 text-lg font-semibold">Schnellzugriff</h3>
             <nav className="space-y-2 text-sm">
-              <a href="#" className="block transition-colors hover:text-primary">
+              <a
+                href="#"
+                className="block transition-colors hover:text-primary"
+              >
                 Startseite
               </a>
-              <a href="#" className="block transition-colors hover:text-primary">
+              <a
+                href="#"
+                className="block transition-colors hover:text-primary"
+              >
                 Unser Team
               </a>
-              <a href="#" className="block transition-colors hover:text-primary">
+              <a
+                href="#"
+                className="block transition-colors hover:text-primary"
+              >
                 Motorräder
               </a>
-              <a href="#" className="block transition-colors hover:text-primary">
+              <a
+                href="#"
+                className="block transition-colors hover:text-primary"
+              >
                 Autos
               </a>
-              <a href="#" className="block transition-colors hover:text-primary">
+              <a
+                href="#"
+                className="block transition-colors hover:text-primary"
+              >
                 Kontakt
               </a>
             </nav>
@@ -61,7 +84,7 @@ function Footerdemo() {
               <p>Industriestraße 16</p>
               <p>96317 Kronach</p>
               <p>E-Mail: info@pars-motorsport.com</p>
-              <p>Tel: +49 (0) 9261 9658830</p>  
+              <p>Tel: +49 (0) 9261 9658830</p>
               <p>Fax: +49 (0) 9261 9658831</p>
             </address>
           </div>
@@ -71,7 +94,11 @@ function Footerdemo() {
               <TooltipProvider>
                 <Tooltip>
                   <TooltipTrigger asChild>
-                    <Button variant="outline" size="icon" className="rounded-full">
+                    <Button
+                      variant="outline"
+                      size="icon"
+                      className="rounded-full"
+                    >
                       <FontAwesomeIcon icon={faFacebook} className="h-4 w-4" />
                       <span className="sr-only">Facebook</span>
                     </Button>
@@ -84,7 +111,11 @@ function Footerdemo() {
               <TooltipProvider>
                 <Tooltip>
                   <TooltipTrigger asChild>
-                    <Button variant="outline" size="icon" className="rounded-full">
+                    <Button
+                      variant="outline"
+                      size="icon"
+                      className="rounded-full"
+                    >
                       <FontAwesomeIcon icon={faXTwitter} className="h-4 w-4" />
                       <span className="sr-only">X</span>
                     </Button>
@@ -97,7 +128,11 @@ function Footerdemo() {
               <TooltipProvider>
                 <Tooltip>
                   <TooltipTrigger asChild>
-                    <Button variant="outline" size="icon" className="rounded-full">
+                    <Button
+                      variant="outline"
+                      size="icon"
+                      className="rounded-full"
+                    >
                       <FontAwesomeIcon icon={faInstagram} className="h-4 w-4" />
                       <span className="sr-only">Instagram</span>
                     </Button>
@@ -110,7 +145,11 @@ function Footerdemo() {
               <TooltipProvider>
                 <Tooltip>
                   <TooltipTrigger asChild>
-                    <Button variant="outline" size="icon" className="rounded-full">
+                    <Button
+                      variant="outline"
+                      size="icon"
+                      className="rounded-full"
+                    >
                       <FontAwesomeIcon icon={faYoutube} className="h-4 w-4" />
                       <span className="sr-only">YouTube</span>
                     </Button>
@@ -153,7 +192,7 @@ function Footerdemo() {
         </div>
       </div>
     </footer>
-  )
+  );
 }
 
-export { Footerdemo }
+export { Footerdemo };
