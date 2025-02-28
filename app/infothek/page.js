@@ -1,4 +1,3 @@
-import PersonalCard from "@/components/ui/personalcard";
 import HeaderText from "../../components/ui/headertext";
 
 export default function About() {
